@@ -1,0 +1,51 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Deep image priors for lung nodule data augmentation in early detection}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Octavio E. Martinez Manzanera\inst{1} \and
+Vasileios Baltatzis\inst{1} \and
+Sujal Desai\inst{2,3} \and
+Anand Devaraj\inst{2} \and
+Sam Ellis\inst{1} \and
+Loic Le Folgoc\inst{3} \and
+Arjun Nair\inst{4} \and
+Ben Glocker\inst{3} \and
+Julia Schnabel\inst{1}}
+%
+\authorrunning{O. Martinez Manzanera et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Biomedical Engineering and Imaging Sciences, King’s College London, UK \and
+The Royal Brompton & Harefield NHS Foundation Trust, London UK \and
+BioMedIA, Imperial College London, UK \and
+Department of Radiology, University College London, UK}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+The presence of lung nodules is the key feature of lung cancer diagnosis. They are commonly identified  by an experienced radiologist in a computer tomography (CT) scan. In recent years, different Convolutional Neural Networks (CNNs) architectures have been proposed to support this diagnosis. However, both radiologists and CNNs can only identify nodules that are already formed or at least have a recognizable structure. This can leave out early-stage nodules which are fundamental in the detection of early-stage lung cancer. In this study we extended the deep image prior inpainting technique to 3D volumes CT scans. We applied this technique to 800 CT scans from the Lung Image Database Consortium (LIDC) dataset. Specifically, we masked out the lung nodules using the union of the segmentations masks provided by a maximum of four annotators. The aim was to produce, for each scan, a corresponding volume that reproduces the original scan but does not contain any annotated nodule from the original image. We expect that the generated dataset contains the anatomical characteristics of the lungs before the nodules appearance. Once the generated dataset was obtained we employed a generative model (cycleGAN) to produce images that represent the nodules' evolution. Both the generated dataset using deep image prior and the images showing nodule progression were qualitatively assessed by experienced radiologists. We expect that this technique and the obtained dataset help to understand lung nodule progression in lung cancer and to improve early-stage detection.
+
+\keywords{Lung cancer  \and Deep image prior \and Computed Tomography}
+\end{abstract}
+%
+%
+\end{document}
